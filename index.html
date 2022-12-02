@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="reset.css">
+  <title>Frontend Mentor | [Challenge Name Here]</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    body {
+      background-color: hsl(270, 20%, 96%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-image: url();
+    }
+
+    main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 5rem;
+      width: 80%;
+      margin-block: 5rem;
+
+
+
+    }
+
+    .phone {
+      width: 18rem;
+      display: flex;
+      flex-direction: column;
+      background-color: hsl(273, 27%, 94%);
+      /* padding: 1rem; */
+      border: 1rem solid white;
+      border-radius: 40px;
+      box-shadow: 0px 5px 15px 5px #B7B7B7;
+    }
+
+    .top-area {
+      background-color: white;
+      width: 10rem;
+      padding: 1.2rem;
+      align-self: center;
+      position: absolute;
+      transform: translateY(-1rem);
+      border-radius: 20px;
+
+    }
+
+    .top-screen {
+      /* background-color: hsl(264, 100%, 61%), hsl(293, 100%, 63%); */
+      padding: 1rem;
+      background: linear-gradient(to right, hsl(264, 100%, 61%), hsl(293, 100%, 63%));
+      display: flex;
+      gap: .7rem;
+      justify-content: space-between;
+      padding-top: 2rem;
+      border-radius: 25px 25px 5px 5px;
+    }
+
+    .arrow {
+      color: wheat;
+      font-weight: 900;
+    }
+
+    .profile {
+      border-radius: 50%;
+      border: 1px solid white;
+      width: 2rem;
+    }
+
+    .heading {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      /* align-items: center; */
+      gap: .5rem;
+    }
+
+    .sub-heading {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      /* align-items: center; */
+      gap: .5rem;
+    }
+
+    h3 {
+      color: white;
+      font-size: 1.2rem;
+    }
+
+    .heading>p {
+      color: hsl(276, 100%, 81%);
+      font-size: 0.8rem;
+    }
+
+    .dots {
+      color: white;
+      align-self: center;
+      font-size: 1.5rem;
+
+    }
+
+    .screen {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      margin: 1rem;
+    }
+
+    .first-msg {
+      display: flex;
+      flex-direction: column;
+      gap: .5rem;
+    }
+
+    .first-msg>*,
+    .left-msg {
+      max-width: 60%;
+      color: hsl(276, 55%, 52%);
+      background-color: hsl(213, 16%, 89%);
+      padding: 0.5rem;
+      border-radius: 10px;
+      font-size: 0.8rem;
+
+    }
+
+    .right-msg {
+      display: flex;
+      flex-direction: column;
+      gap: .5rem;
+      max-width: 65%;
+      align-self: flex-end;
+      align-items: flex-end;
+    }
+
+    .right-msg>p {
+      background-color: white;
+      font-size: 0.8rem;
+      padding: 0.5rem;
+      border-radius: 10px;
+      max-width: max-content;
+    }
+
+    .images {
+      display: flex;
+      gap: .5rem;
+      /* margin: .5rem; */
+      /* max-width: 60%; */
+    }
+
+    .images>* {
+      max-width: 3.2rem;
+      border-radius: 10px;
+    }
+
+    .walk {
+      max-width: 75%;
+      display: flex;
+      /* justify-content: space-between; */
+      /* font-size: 0.9rem; */
+      padding: .8rem;
+      background: linear-gradient(to left, hsl(264, 100%, 61%), hsl(293, 100%, 63%));
+      align-items: center;
+      gap: 1rem;
+      border-radius: 10px;
+    }
+
+    .walk>* {
+      font-size: 0.9rem;
+      color: white;
+      font-size: 0.9rem;
+    }
+
+    .walk .end {
+      color: white;
+      font-size: larger;
+      margin-left: auto;
+    }
+
+    .circle {
+      padding: .5rem;
+      /* width: 1rem; */
+      border-radius: 50%;
+      border: 1px solid white;
+    }
+
+    input {
+      width: 87%;
+      padding: 1rem;
+      border-radius: 30px;
+      border: none;
+      /* margin: auto; */
+    }
+
+    input::placeholder {
+      color: hsl(206, 6%, 79%);
+    }
+
+    input::placeholder:hover {
+      cursor: nesw-resize;
+    }
+
+    .label {
+      background-color: hsl(271, 36%, 24%);
+      width: 1rem;
+      padding: .6rem;
+      border-radius: 50%;
+      /* padding-inline: .8rem; */
+      position: absolute;
+      /* transform: translateX(-2.5rem), ; */
+      transform: translate(-2.5rem, 5px);
+      color: white;
+
+    }
+
+    .simple {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+
+    }
+
+    .simple h1 {
+      color: hsl(271, 36%, 24%);
+      font-size: 3rem;
+      font-weight: 700;
+    }
+
+    .simple p {
+      color: hsl(270, 7%, 64%);
+      line-height: 1.8rem;
+      font-size: 1.3rem;
+    }
+
+    .bub {
+      position: absolute;
+      width: 100%;
+      height: 70%;
+      padding: 1rem;
+      top: 0;
+      left: -50%;
+      z-index: -1;
+      border-radius: 0 0 50% 50%;
+
+      background: linear-gradient(hsl(264, 100%, 61%), hsl(293, 100%, 63%));
+
+    }
+
+    @media(min-width:1000px) {
+      main {
+        flex-direction: row;
+        gap: 10rem;
+      }
+
+      .simple {
+        max-width: 32rem;
+        text-align: start;
+      }
+
+      .simple h1 {
+        margin-right: auto;
+      }
+
+      .bub {
+        width: 38%;
+        height: 85%;
+        left: -10%;
+
+      }
+    }
+
+
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="bub"></div>
+  <main>
+    <section class="phone">
+      <div class="top-area">
+
+      </div>
+      <div class="top-screen">
+        <div class="sub-heading">
+          <span class="arrow">
+            < </span>
+              <span><img class="profile" src="./images/avatar.jpg" alt=""></span>
+              <div class="heading">
+
+                <h3>Samuel Green</h3>
+                <p> Available to Walk</p>
+              </div>
+        </div>
+        <span class="dots">:</span>
+      </div>
+      <section class="screen">
+        <div class="first-msg">
+          <p> That sounds great. I’d be happy to discuss more.</p>
+
+          <p> Could you send over some pictures of your dog, please?</p>
+        </div>
+        <section class="right-msg">
+          <div class="images">
+            <img src="./images/dog-image-1.jpg" alt="">
+            <img src="./images/dog-image-2.jpg" alt="">
+            <img src="./images/dog-image-3.jpg" alt="">
+          </div>
+
+          <p> Here are a few pictures. She’s a happy girl!</p>
+
+          <p> Can you make it?</p>
+        </section>
+
+        <p class="left-msg"> She looks so happy! The time we discussed works. How long shall I take her out for?</p>
+        <div class="walk">
+          <span class="circle"></span>
+          <p>30 minute walk</p>
+          <p class="end"> $29</p>
+        </div>
+        <div class="walk">
+          <span class="circle"></span>
+          <p>1 hour walk</p>
+          <p class="end"> $49</p>
+        </div>
+        <div class="type">
+          <input type="text" name="chat" id="chat" placeholder="Type a message…">
+          <span class="label"><label for="chat"> &#60; </label></span>
+        </div>
+      </section>
+    </section>
+    <div class="simple">
+      <h1>Simple booking</h1>
+
+      <p> Stay in touch with our dog walkers through the chat interface. This makes it easy to
+        discuss arrangements and make bookings. Once the walk has been completed you can rate
+        your walker and book again all through the chat.</p>
+    </div>
+  </main>
+
+</body>
+
+</html>
